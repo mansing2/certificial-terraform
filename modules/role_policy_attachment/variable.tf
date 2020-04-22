@@ -1,5 +1,5 @@
 variable "name" {
-default ="="ecs_task_role_policy_attachment"
+default ="ecs_task_role_policy_attachment"
 }
 variable "roles_names" {
 type ="list"

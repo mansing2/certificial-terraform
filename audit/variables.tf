@@ -1,5 +1,5 @@
 variable "access_key"{
-default=
+default=""
 } 
 variable "secret_key"{
 default=""
@@ -10,7 +10,7 @@ default = "us-east-1"
 
 /*variable "state_backup_s3bucket"{
 description ="s3 bucket to store tfstate file" 
-value       ="my-sample-tfstate-backup-bucket"
+value       =""
 }
 */
 
@@ -115,11 +115,11 @@ variable "fargate_memory" {
   default     = "bradfordhamilton/crystal_blockchain:latest"
 }
 
- /*variable "container_name" {
+variable "container_name" {
   description = "name of container for ecs service"
   default     = "container01"
 }
-*/
+
 #ecs_Role 
 variable "ecs_role_name" {default ="ecs-task"}
 

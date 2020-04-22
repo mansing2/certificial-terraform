@@ -8,5 +8,6 @@ data "template_file" "ecs_container_definition" {
     fargate_cpu    = var.fargate_cpu
     fargate_memory = var.fargate_memory
     aws_region     = var.aws_region
+    container_name = var.container_name
   }
 }

@@ -6,6 +6,6 @@ variable "app_port"{}
 variable "fargate_cpu"{}
 variable "fargate_memory"{}
 variable "aws_region"{}
-
+variable "container_name"{}
  
  

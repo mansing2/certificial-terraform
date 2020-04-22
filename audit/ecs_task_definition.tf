@@ -7,7 +7,7 @@ module "task_template01" {
     fargate_cpu               = "${var.fargate_cpu}"
     fargate_memory            = "${var.fargate_memory}"
     aws_region                = "${var.aws_region}"
-
+    container_name            = "${var.container_name}"
 }
 
 

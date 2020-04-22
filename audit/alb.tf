@@ -19,7 +19,7 @@ module "targetgroup01" {
 module "alblistener01" {
     source                    = "../modules/alb_listener"
     load_balancer_arn         = "${module.alb01.alb_arn}"
-    alb_target_group_arn      = "${module.targetgroup01.target_group_arn}"
+    alb_target_group_arn      = "${module.targetgroup01.target_group_id}"
     app_port                  = "${var.sg_alb_app_port}"
 }
 

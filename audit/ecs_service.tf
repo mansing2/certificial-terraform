@@ -9,8 +9,10 @@ module "ecs_service01" {
     security_groups           =["${module.security_group_ecs_tasks.security_group_id}"]
     subnet_ids                ="${var.ecs_service_subnet_ids}"
     alb_target_group_arn      ="${module.targetgroup01.target_group_arn}"
-    #container_name            ="${var.container_name}"
+    container_name            ="${var.container_name}"
     app_port                  ="${var.sg_alb_app_port}"
+
+    depend_on=["${module.alblistener01.alb_listener_id}","${module.alb01.alb_id}","${module.targetgroup01.target_group_id}"]
+    
+
 }
-
-
