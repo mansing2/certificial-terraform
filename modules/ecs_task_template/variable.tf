@@ -7,5 +7,5 @@ variable "fargate_cpu"{}
 variable "fargate_memory"{}
 variable "aws_region"{}
 variable "container_name"{}
- 
+variable "log_group_name"{} 
  

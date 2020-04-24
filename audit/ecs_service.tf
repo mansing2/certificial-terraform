@@ -1,5 +1,4 @@
 #ECS_SERVICE
-
 module "ecs_service01" {
     source                    = "../modules/ecs_service"
     name                      ="${var.ecs_service_name}"  

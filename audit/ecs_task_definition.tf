@@ -1,3 +1,9 @@
+#CW LOG Group 
+module "cw_log_group01" {
+    source                    = "../modules/cw_log_group"
+    name                      ="/ecs/${var.container_name}"
+}
+
 #ECS task template
 module "task_template01" {
     source                    = "../modules/ecs_task_template"
@@ -8,6 +14,8 @@ module "task_template01" {
     fargate_memory            = "${var.fargate_memory}"
     aws_region                = "${var.aws_region}"
     container_name            = "${var.container_name}"
+    #log_group_name            = "/ecs/container1"
+    log_group_name           = "${module.cw_log_group01.cw_log_group_name}"
 }
 
 

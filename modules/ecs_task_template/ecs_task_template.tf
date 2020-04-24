@@ -9,5 +9,6 @@ data "template_file" "ecs_container_definition" {
     fargate_memory = var.fargate_memory
     aws_region     = var.aws_region
     container_name = var.container_name
+    log_group_name = var.log_group_name
   }
 }
