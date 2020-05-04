@@ -76,7 +76,7 @@ default="Rules for windows dev Instances"
 variable "ecs_service_subnet_ids"{
 type="list"
 description= "private subnets for ecs task"
-default=["subnet-c72cb5f9","subnet-b0a8f89e"]
+default=["subnet-0958180e83b78cf24","subnet-09c127f5bff375b2c"]
 }
 
 variable "ecs_service_name"{
@@ -112,7 +112,7 @@ variable "fargate_memory" {
  
  variable "app_image" {
   description = "Docker image to run in the ECS cluster"
-  default     = "nginx:latest"
+  default     = "132164011090.dkr.ecr.us-east-1.amazonaws.com/repository01:latest"
 }
 
 variable "container_name" {
@@ -144,3 +144,26 @@ variable "ecs_role_policy_attachment_name"{
 description="role policy attachment name for role ecs-task"
 default="ecs_task_role_policy_attachment"
 }
+
+#ecs_autoscale
+variable "autoscale_up_policy_name"{
+default = "cb_scale_up"
+}
+
+
+variable "autoscale_down_policy_name"{
+default = "cb_scale_down"
+}
+
+#cloud watch alarm Names to trigger autoscaling actions
+variable "cw_alarm_cpu_utilization_up_name"{
+description = "name of alarm"
+default = "cb_cpu_utilization_high"
+}
+
+variable "cw_alarm_cpu_utilization_down_name"{
+description = "name of alarm"
+default = "cb_cpu_utilization_low"
+}
+
+
